@@ -1,0 +1,22 @@
+
+Installation
+============
+
+perl Makefile.PL 
+make 
+make test
+make install
+
+perldoc File::Find::Similars
+
+There also includes in the package a client program, similars.pl.
+Copy it to a directory which is in the PATH. Issue similars.pl
+to get help on how to use it.
+
+Get Help
+========
+
+perldoc File::Find::Similars
+
+or, refer to .htm that come with this package for detailed helps.
+

@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Similars</TITLE>
+<META NAME="generator" CONTENT="txt2html v1.28">
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+</HEAD>
+<BODY>
+<A NAME="page_top"><TABLE width=100%>
+ <TR>  
+  <TD align=right>
+   <A href="#page_top" target="_top">Click here to get rid of any annoying frames</A> 
+ </TR>
+</TABLE><hr size=3>
+<H1><A NAME="section-1.">Similar file finder</A></H1>
+
+<!-- New Message -->
+<p>
+<A NAME="0">Newsgroups:</A> <A HREF="news:comp.lang.perl.misc">comp.lang.perl.misc</A>,<A HREF="news:comp.unix.programmer">comp.unix.programmer</A><BR>
+
+<P>
+Hi,
+
+<P>
+I'm planing to write a "Similar file finder", which will walks along
+the given dirs to find all similar files within it. 
+
+<UL>
+  <LI>First I want to know if anybody has written similar tools already.
+
+</UL>
+<P>
+Searching intensively in news archive, I can only located such
+request/respond in newsgroups: <A HREF="news:comp.graphics.apps.paint-shop-pro">comp.graphics.apps.paint-shop-pro</A>
+(what a strange place to find such kind of program :-&gt;)
+
+<P>
+<A HREF="http://groups.google.com/groups?hl=en&amp;threadm=LhAh4.11633%24NU6.569262%40tw12.nn.bcandid.com&amp;rnum=56&amp;prev=/groups%3Fq%3Dfile%2Bsimilar%2Bcompare%2Bscript%2BOR%2Bprogram%26num%3D50%26hl%3Den%26start%3D50%26sa%3DN">http://groups.google.com/groups?hl=en&amp;threadm=LhAh4.11633%24NU6.569262%40tw12.nn.bcandid.com&amp;rnum=56&amp;prev=/groups%3Fq%3Dfile%2Bsimilar%2Bcompare%2Bscript%2BOR%2Bprogram%26num%3D50%26hl%3Den%26start%3D50%26sa%3DN</A>
+
+<P>
+,----- [quotes from above thread] ---
+<P CLASS='mquote1'>
+| Now you can down load any number of similar files and run the program to<BR>
+<P CLASS='mquote1'>
+| compare the incoming files against the list of "got that one" Even if<BR>
+<P CLASS='mquote1'>
+| someone renamed the file the program will recognize that and rename it to<BR>
+<P CLASS='mquote1'>
+| the correct name...<BR>
+<P CLASS='mquote1'>
+| <BR>
+<P CLASS='mquote1'>
+| If you want to get an idea of how powerful this tool is just substitute the<BR>
+<P CLASS='mquote1'>
+| word "font" in the above paragraph with any file extension you like (.jpg<BR>
+<P CLASS='mquote1'>
+| .gif .bmp   .mp3   .mpg   .avi  etc.)<BR>
+<P CLASS='mquote1'>
+| <BR>
+<P CLASS='mquote1'>
+| How it works inside is kind of technical( I don't understand all of<BR>
+<P CLASS='mquote1'>
+| it)... so far the program has worked on every file type I have tried<BR>
+<P CLASS='mquote1'>
+| it on.<BR>
+`-----
+
+<P>
+I did not include the DOS program's name here because what seems as
+such an amazing tools to a PSP user is just a CRC checksum
+comparing program. I'm sure most of us here can hack one in just
+minutes.
+
+<P>
+What's in my mind is much more powerful than it. It can not only
+find out <EM>identical</EM> files but also find out similar files. Ok, what
+are similar files? Files that have different file name, time and
+size (might be content also), and yet they represent same thing.
+
+<P>
+Is such program really necessary? Why would files that have
+different name, time and size represent same thing? Well, does words
+like "Napster", "Gnutella" ring the bell? Different names for same
+file are not rare at all. Different version (.txt, .html, or .pdf)
+and different compression methods (.zip, .gz, .tar.gz, .bip2) make
+it even worse. And let alone there are partial downloads floating
+around everywhere. Moreover, sample rate make a huge different in
+MP3 files, even if they sound no much different to human ears.
+
+<P>
+One poster said (in above thread):
+
+<P>
+,-----
+<P CLASS='mquote1'>
+| I have over 200 cd that I have burned full of different files. Also three<BR>
+<P CLASS='mquote1'>
+| HD's. There is not a duplicate of any file anywhere on any of my storage<BR>
+<P CLASS='mquote1'>
+| mediums.<BR>
+`-----
+
+<P>
+Well, I have much much less collection than s/he did, but I'm sure more
+than 10% of my collection are duplicated similar files, and the
+percentage is very likely above that. 
+
+<hr align=center width='50%'>
+<H2><A NAME="section-1.1.">Similar file finder</A></H2>
+
+<P CLASS='mquote1'>
+&gt; It sounds like you're trying to reinvent what Napster calls the<BR>
+<P CLASS='mquote1'>
+&gt; "fingerprinting technology". And it seems to me that that isn't exactly<BR>
+<P CLASS='mquote1'>
+&gt; simple. No, I'm not an insider.<BR>
+<P CLASS='mquote1'>
+&gt; <BR>
+<P CLASS='mquote1'>
+&gt; So let's say you want to recognize files of the same audio track, or<BR>
+&gt; image files at a different resolution. So what can you do? First,
+
+<P>
+No I'm not planing to be that fancy. I'm going to make the guess
+only based on the file name and file size.
+
+<P>
+I'd be happy enough if my program can pick out the following (among
+thousands of files) as similar file candidates:
+
+<P>
+Andie Macdowell.jpg 8k<BR>
+andy macddowel.gif  12k
+
+<P>
+As to the algorithm, I'm going to map each individual word in file
+name into soundex, and use term vector (I borrow this term and
+thought from the famous TF/IDF information retrieval algorithm for
+similarity calculation) to determine the similarity between
+files. Generally it means that if there are n files, each having
+approximately m words, the degree of calculation is
+
+<P>
+O(n^2 * m)
+
+<P>
+File size is also taken into consideration.
+
+
+</BODY>
+</HTML>

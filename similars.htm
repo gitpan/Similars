@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE>similars - Similar files locator</TITLE>
+<LINK REV="made" HREF="mailto:root@porky.devel.redhat.com">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
+	<LI><A HREF="#SEE_ALSO">SEE ALSO</A>
+	<LI><A HREF="#COPYRIGHT">COPYRIGHT</A>
+	<LI><A HREF="#TODO">TODO</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+similars - Similar files locator
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>  [perl -S] similars.pl [--level=1] [dirs...]
+</PRE>
+<P>
+Similar-sized and similar-named files are picked as suspicious candidates
+of duplicated files.
+
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+What descirbes it better than a sample output:
+
+<P>
+<PRE>  ## =========
+          1574 PopupTest.java          /home/tong/.../examples/chap10
+          1561 CardLayoutTest.java     /home/tong/.../examples/chap1
+          1570 PopupButtonFrame.class  /home/tong/.../examples/chap6
+</PRE>
+<P>
+<PRE>  ## =========
+         22984 BinderyHelloWorld.jpg  /home/tong/...
+         17509 MacHelloWorld.gif      /home/tong/...
+</PRE>
+<P>
+The motto is, I would rather my program overkills (wrongly picking out
+suspicious ones) than neglects something that would cause me otherwise
+years to notice.
+
+<P>
+By default, similars.pl assumes that similar files within the <STRONG>same folder</STRONG>
+are OK. Hence you will not get duplicate warnings for generated files (like
+.o, .class or .aux, and .dvi files) or other file series. Once you are sure
+that there are no duplications between different folders and want
+similars.pl to scoop further, specify the --level=1 command line switch.
+This is very good to eliminate similar mp3 files within the same folder, or
+downloaded files from big sites where different packaging methods are used,
+e.g.:
+
+<P>
+<PRE>  ## =========
+         66138 jdc-src.tar.gz  .../ftp.ora.com/published/oreilly/java/javadc
+        147904 jdc-src.zip     .../ftp.ora.com/published/oreilly/java/javadc
+</PRE>
+<P>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<P>
+<PRE> @Author:  SUN, Tong &lt;suntong at users sourceforge net&gt;
+ @HomeURL: <A HREF="http://xpt.sourceforge.net/">http://xpt.sourceforge.net/</A>
+</PRE>
+<P>
+<HR>
+<H1><A NAME="SEE_ALSO">SEE ALSO</A></H1>
+<P>
+File::Compare(3), File::Find::Duplicates(3)
+
+<P>
+<CODE>perl(1).</CODE> 
+
+<P>
+<HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT</A></H1>
+<P>
+Copyright (c) 1997-2001 Tong SUN. All rights reserved.
+
+<P>
+Distribute freely, but please include the author's info &amp; copyright,
+the file's version &amp; url with the distribution.
+
+<P>
+Support free software movement! Please send you comments, suggestions, bug
+reports, patches to the author from the xpt project home URL. They are
+warmly welcome. Thank you for using the tools from the xpt project.
+
+<P>
+<HR>
+<H1><A NAME="TODO">TODO</A></H1>
+</BODY>
+
+</HTML>

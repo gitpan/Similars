@@ -1,0 +1,5 @@
+File::Find::Similars -- Similar file locator, which walks along the given dirs
+to find all similar files, not only identical ones: different version (.txt,
+.html, or .pdf) and different compression methods (.zip, .gz, .tar.gz, .bip2),
+MP3 files with different sample rates, etc. It uses advanced soundex vector
+algorithm to determine the file similarities.

@@ -1,0 +1,47 @@
+
+Linux Advocate
+==============
+
+The "Similar file locator" is brought to you by the *niX Power Tools
+(Xpt) project.
+
+A word to those who still choose to live in the miserable M$ world:
+it's high time to reconsider, especially for those who don't have a
+clue what a Perl is and having a hard time trying to install
+one. Linux now has most the bells and whistles of your daily need,
+and much more beyond that.
+
+I was hindered by the saying "Look how many application written for
+Windows, and how many for Linux", before I enter the Linux world.
+I'm not saying it is wrong, it is still true by now. But the
+difference is I know "why" now. Offline browser, for example, *nix
+(Linux/Unix) has only one official tool -- wget, "quite pathetic"
+you might think, since there are dozens of such tools under Windoze
+(I personally have tried more than 10 of them).
+
+My interpretation of "so many application written for Windows and so
+less for Linux" is: "all applications under windoze sucks". People
+get frustrated with the existing ones so they have to create another
+one. Yet they all sucks.  Ever tried to dowload a web site that
+wraps the URLs in javascript? Oh, God save you if you use those
+tools under Windoze. I was forced to write an offline browser of my
+own when I was in Windoze.  (Of cause, my offline browser sucks the
+most. :->)
+
+I don't hold the belief that "abundant tools is good thing" any
+more. I'm tired of trying them one after another now. Beside, almost
+all Windoze tools want to ripe me off. Imperfection is placed in
+deliberately so that I have to pay again and again for the
+'upgrade'. I swithed to Linux, several years ago...
+
+Well come to Linux, a world of freedom.
+
+PS. speaking the sense of freedom, did you know there's also a Perl
+script (mp3mover.pl) which renames MP3 files to a consistent
+user-defined naming scheme? --- you have to settle down with the
+chaos that you get in Windoze, but not in *nix!
+
+Tong 
+
+  "In the windoze world, I am limited by the tools that I can use; In
+  Unix, I am limited by my own wisdom"
