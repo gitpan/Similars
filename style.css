@@ -7,4 +7,4 @@
 A:link	 {TEXT-DECORATION: none; color: blue}
 A:active {TEXT-DECORATION: none;color: red}
 A:visited {TEXT-DECORATION: none; color : #006000}
-A:hover	 {TEXT-DECORATION: underline overline blink; color : #00aa00; background: #fef0f0}
+A:hover	 {TEXT-DECORATION: underline overline; color : #00aa00; background: #f2ee40}

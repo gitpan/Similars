@@ -8,7 +8,7 @@
 
 BEGIN { $| = 1; print "1..2\n"; }
 END {print "not ok 1\n" unless $loaded;}
-use File::Find::Similars;
+use File::Searcher::Similars;
 $loaded = 1;
 print "ok 1\n";
 
@@ -32,7 +32,7 @@ print <<'EOF';
 == Testing 2 begins:
 EOF
 
-File::Find::Similars->init(1, [test]);
+File::Searcher::Similars->init(1, [test]);
 similarity_check_name();
 
 print "ok 2\n";

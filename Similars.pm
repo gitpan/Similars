@@ -1,20 +1,20 @@
-package File::Find::Similars;
+package File::Searcher::Similars;
 
 # {{{ POD, Intro:
 
 # @Author: Tong SUN, (c)2001, all right reserved
-# @Version: $Date: 2001/09/26 02:19:34 $ $Revision: 1.8 $
+# @Version: $Date: 2002/09/16 22:55:09 $ $Revision: 1.10 $
 # @HomeURL: http://xpt.sourceforge.net/
 
 =head1 NAME
 
-File::Find::Similars - Similar files locator
+File::Searcher::Similars - Similar files locator
 
 =head1 SYNOPSIS
 
-  use File::Find::Similars;
+  use File::Searcher::Similars;
 
-  File::Find::Similars->init(0, \@ARGV);
+  File::Searcher::Similars->init(0, \@ARGV);
   similarity_check_name();
 
 Similar-sized and similar-named files are picked as suspicious candidates of
@@ -39,12 +39,12 @@ motto for the listing is that, I would rather my program overkills (wrongly
 picking out suspicious ones) than neglects something that would cause me
 otherwise years to notice.
 
-By default, File::Find::Similars(3) assumes that similar files within the
+By default, File::Searcher::Similars(3) assumes that similar files within the
 B<same folder> are OK. Hence you will not get duplicate warnings for generated
 files (like .o, .class or .aux, and .dvi files) or other file series. 
 
 Once you are sure that there are no duplications between folders and want
-File::Find::Similars(3) to scoop further, specify the first parameter as
+File::Searcher::Similars(3) to scoop further, specify the first parameter as
 1. This is very good to eliminate similar mp3 files within the same folder, or
 downloaded files from big sites where different packaging methods are used,
 e.g.:
@@ -82,8 +82,6 @@ use File::Basename;
 use Text::Soundex;
 
 # -- local modules
-use lib dirname($0);
-use fdispatch;
 
 # -- global variables
 use vars qw($progname $VERSION $verbose $debugging);
@@ -91,7 +89,7 @@ use vars qw($progname $VERSION $verbose $debugging);
 # ============================================================== &cs ===
 # ................................................. Constant setting ...
 #
-$VERSION = sprintf("%d.%02d", q$Revision: 1.8 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.10 $ =~ /(\d+)\.(\d+)/);
 
 
 # ============================================================== &gv ===
@@ -115,7 +113,7 @@ my $fc_level=0;
 # ................................................ Subroutions start ...
 
 # =========================================================== &s-sub ===
-# S -  File::Find::Similars->init($fc_level, \@ARGV);
+# S -  File::Searcher::Similars->init($fc_level, \@ARGV);
 # D -  initialize file comparing level and dir queue
 # 
 # T -  
@@ -140,7 +138,7 @@ sub process_dir {
     my($dir) = @_;
     #warn "] processing dir '$dir'...\n";
 
-    opendir(DIR,$dir) || die "File::Find::Similars error: Can't open $dir";
+    opendir(DIR,$dir) || die "File::Searcher::Similars error: Can't open $dir";
     my @filenames = readdir(DIR);
     closedir(DIR);
 

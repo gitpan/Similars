@@ -9,7 +9,7 @@ use strict;			# !
 use integer;			# !
 
 use Getopt::Long;
-use File::Find::Similars;
+use File::Searcher::Similars;
 
 # ============================================================== &gv ===
 # .................................................. Global Varibles ...
@@ -33,13 +33,13 @@ GetOptions(
     "level:i"	=> \$fc_level,
     ) || die;
 
-File::Find::Similars->init($fc_level, \@ARGV);
+File::Searcher::Similars->init($fc_level, \@ARGV);
 similarity_check_name();
 
 # {{{ POD:
 
 # @Author: Tong SUN, (c)2001, all right reserved
-# @Version: $Date: 2001/10/01 00:08:39 $ $Revision: 1.1 $
+# @Version: $Date: 2002/09/16 22:55:09 $ $Revision: 1.2 $
 # @HomeURL: http://xpt.sourceforge.net/
 
 =head1 NAME

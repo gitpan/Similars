@@ -1,9 +1,12 @@
-		       What's New in $Revision: 1.1 $
+		       What's New in $Revision: 1.2 $
 
 						$Author: tong $
 
 
 $Log: Similars.news,v $
+Revision 1.2  2002/09/16 22:43:27  tong
+- change package name from File::Find::Similars to File::Searcher::Similars
+
 Revision 1.1  2001/09/26 01:59:00  tong
 Initial revision
 
